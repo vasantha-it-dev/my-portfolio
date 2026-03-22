@@ -36,3 +36,10 @@ lightbox.addEventListener('click', (e) => {
         closeBtn.click();
     }
 });
+const profileImg = document.querySelector('.profile-img');
+
+document.addEventListener('mousemove', (e) => {
+    let xAxis = (window.innerWidth / 2 - e.pageX) / 20;
+    let yAxis = (window.innerHeight / 2 - e.pageY) / 20;
+    profileImg.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+});
